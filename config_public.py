@@ -3,7 +3,7 @@ DEBUG = True
 # Flatpages
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = [".md", ".markdown"]
-FLATPAGES_MARKDOWN_EXTENSION =["codehilite", "fenced_code"]
+FLATPAGES_MARKDOWN_EXTENSION =["codehilite", "fenced_code", "tables"]
 PAGES_NUMBER_PER_PAGE = 5
 
 # Mail server

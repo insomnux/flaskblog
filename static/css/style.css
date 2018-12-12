@@ -16,6 +16,10 @@ pre {
   padding: 5px 10px;
 }
 
+code {
+  font-size: initial;
+}
+
 /* === Wrapper === */
 
 #wrapper {

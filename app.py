@@ -7,7 +7,7 @@ from models.forms import ContactForm as ContactForm
 
 def my_markdown(text):
     markdown_text = render_template_string(text)
-    pygmented_text = markdown.markdown(markdown_text, extensions=["codehilite", "fenced_code"])
+    pygmented_text = markdown.markdown(markdown_text, extensions=["codehilite", "fenced_code", "tables"])
     return pygmented_text
 
 app = Flask(__name__)

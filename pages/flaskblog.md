@@ -28,18 +28,18 @@ imgalt: Photo of my cute cat
 
 Metadata tags used:
 
-|  tag   | used for                                           |
-|--------|--------------------------------------------------------------|
-| title  | post or page title                                           |
-| date   | publication date - mandatory for posts                       |
-| descr  | page or post description                                     |
-| tags   | tags for the post                                            |
-| img    | filename of a picture uploaded in `static/pictures`          |
-| imgalt | alt property for picture (required)                          |
-| static | `static: True` signifies that an article is a post, not page |
+  tag   | used for                                           
+--------|--------------------------------------------------------------
+ title  | post or page title                                           
+ date   | publication date - mandatory for posts                       
+ descr  | page or post description                                     
+ tags   | tags for the post                                            
+ img    | filename of a picture uploaded in `static/pictures`          
+ imgalt | alt property for picture (required)                          
+ static | `static: True` signifies that an article is a post, not page 
 
-+ Displays post list by post date in `&lt;HOSTNAME&gt;/articles/&lt;POSTNAME&gt;`
-+ Static pages (yaml matter: `static: True`) in `&lt;HOSTNAME&gt;/&lt;PAGENAME&gt;`
++ Displays post list by post date in `$HOSTNAME/articles/$POSTNAME` - ex: [insomnux.pythonanywhere.com/articles/dolor-sin-amet/](http://insomnux.pythonanywhere.com/articles/dolor-sin-amet/)
++ Static pages (yaml matter: `static: True`) in `$HOSTNAME/$PAGENAME` - ex: [insomnux.pythonanywhere.com/about](http://insomnux.pythonanywhere.com/about/)
 + Tags support
 + Contact form with [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) and [Flask-Mail](https://pythonhosted.org/Flask-Mail/)
 + Code highlighting with [Pygments](http://pygments.org/)
