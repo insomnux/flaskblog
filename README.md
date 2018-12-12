@@ -2,6 +2,45 @@
 
 A very simple blog with [Flask](http://flask.pocoo.org/) and [Flask-Flatpages](https://flask-flatpages.readthedocs.io/)
 
+Demo at [http://insomnux.pythonanywhere.com/](http://insomnux.pythonanywhere.com/)
+
+## Features:
+
+Posts are added in `markdown` format in the `pages` directory. Posts must have [YAML metadata](http://www.yaml.org/), followed by a blank line and then the page or post body.
+
+Example:
+
+```
+title: My post
+date: 2018-12-12
+descr: A new awesome post I wrote
+tags: [post, new, awesome]
+img: cutecat.jpg
+imgalt: Photo of my cute cat
+
+# Lorem Ipsum
+```
+
+Metadata tags used:
+
+| title  | post or page title                                           |
+|--------|--------------------------------------------------------------|
+| date   | publication date - mandatory for posts                       |
+| descr  | page or post description                                     |
+| tags   | tags for the post                                            |
+| img    | filename of a picture uploaded in `static/pictures`          |
+| imgalt | alt property for picture (required)                          |
+| static | `static: True` signifies that an article is a post, not page |
+
+
+![Screenshot of Flask Blog](./screenshot.png)
+
++ Displays post list by post date in `&lt;HOSTNAME&gt;/articles/&lt;POSTNAME&gt;`
++ Static pages (yaml matter: `static: True`) in `&lt;HOSTNAME&gt;/&lt;PAGENAME&gt;`
++ Tags support
++ Contact form with [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) and [Flask-Mail](https://pythonhosted.org/Flask-Mail/)
++ Code highlighting with [Pygments](http://pygments.org/)
+
 ## Credits:
 
 - Tutorials: 
