@@ -1,0 +1,14 @@
+blinker==1.4
+Click==7.0
+Flask==1.0.2
+Flask-FlatPages==0.7.0
+Flask-Mail==0.9.1
+Flask-WTF==0.14.2
+itsdangerous==1.1.0
+Jinja2==2.10
+Markdown==3.0.1
+MarkupSafe==1.1.0
+Pygments==2.3.0
+PyYAML==3.13
+Werkzeug==0.14.1
+WTForms==2.2.1

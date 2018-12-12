@@ -1,0 +1,21 @@
+# Tarballs
+*.gz
+*.bz2
+*.xz
+*.tgz
+*.txz
+*.zip
+
+# Backup files
+*.swp
+*.un~
+*.pyc
+
+# Flask dir
+venv
+__pycache__
+flask_session
+
+# Config
+config.py
+.travis.yml
