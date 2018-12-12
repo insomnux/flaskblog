@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- Banner -->
+<section>
+  <h2>Latest articles</h2>
+    <ul>
+      {% for page in pages %}
+      <li>
+        <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+      </li>
+      {% else %}
+      <li>No articles found</li>
+      {% endfor %}
+    </ul>
+    {% if num > 0 %}
+    {% set prevnum = num - 1 %}
+    <a href="{{ url_for("index_extend", num=prevnum) }}">Previous</a>
+    {% endif %}
+    {% if num < total_num %}
+    {% set nextnum = num + 1 %}
+    <a href="{{ url_for("index_extend", num=nextnum) }}">Next</a>
+    {% endif %}
+</section>
+
+
+{% endblock %}

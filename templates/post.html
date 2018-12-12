@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+
+<section class="content">
+  <header>
+    <h2>{{ page.title }}</h2>
+    {% if page.descr %}
+    <p>{{ page.descr }}</p>
+    {% endif %}
+    {% if page.img and page.imgalt %}
+    {% set imgfile="pictures/" + page.meta.img %}
+    <img src="{{url_for("static", filename=imgfile)}}" alt="{{ page.imgalt }}" class="main_img" />
+    {% endif %}
+  </header>
+
+  <article>
+  {{ page.html|safe }}
+  </article>
+
+  <footer>
+    <div class="taglist">
+      <span class="icon fa-clock-o">&nbsp</span> {{ page.date }}
+      {% if page.meta.tags|length %}
+        <span>|&nbsp</span>
+        {% for tags in page.meta.tags %}
+        <span>&num;<a href="{{ url_for("tag", tag=tags) }}">{{ tags }}</a></span>
+        {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </footer>
+</section>
+
+{% endblock %}

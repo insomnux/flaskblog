@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{% endblock %} - FlaskBlog</title>
+<meta name="description" content="A very simple blog with Flask and Flask-Flatpages ">
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<link rel=stylesheet type=text/css href="{{ url_for("static", filename="css/milligram.min.css") }}" />
+<link rel="stylesheet" href="{{ url_for('pygments_css')  }}">
+<link rel=stylesheet type=text/css href="{{ url_for("static", filename="css/style.css") }}" />
+</head>
+
+<body>
+
+<!-- Wrapper -->
+
+<div id="wrapper">
+
+<!-- Header -->
+<section id="header">
+  <header>
+    <a itemprop="url" href="{{ url_for("index") }}">
+      <img itemprop="logo" src="{{ url_for("static", filename="img/logo.png") }}" alt="Dummy logotype" />
+    </a>
+  </header>
+  <nav id="nav">
+    <input type="checkbox" id="menutoggle">
+    <label for="menutoggle" class="labeltoggle">&#9776; Menu</label>
+    <ul>
+      <li><a href="{{ url_for("index") }}">Blog</a></li>
+      <li><a href="{{ url_for("staticpage", path="about") }}">About</a></li>
+      <li><a href="{{ url_for("contact") }}">Contact</a></li>
+    </ul>
+  </nav>
+</section>
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer>
+  <ul class="icons">
+    <li><a href="https://twitter.com/" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com" class="icon fa-github"><span class="label">Github</span></a></li>
+    <li><a href="mailto:me@example.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+</footer>
+
+</div><!-- ./#wrapper -->
+
+<!-- Copyright -->
+<div id="copyright">
+  &copy; Some Company - All rights reserved.
+</div>
+
+<!-- JS -->
+<!-- <script src="{{ url_for("static", filename="js/main.js") }}"></script>-->
+</body>

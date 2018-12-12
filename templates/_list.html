@@ -1,0 +1,10 @@
+<ul>
+{% for page in pages %}
+    <li>
+      <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a><br>
+      <strong>Published: </strong>{{ page.date }}
+    </li>
+{% else %}
+    <li>No articles found for this tag</li>
+{% endfor %}
+</ul>

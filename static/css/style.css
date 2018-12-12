@@ -1,0 +1,213 @@
+/* === General === */
+
+body{
+  background-color: #f2f2f2;
+  color: #2e3338;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: .02em;
+  line-height: 1.75;
+  padding: 1rem 5px;
+}
+
+pre {
+  background: #515151;
+  padding: 5px 10px;
+}
+
+/* === Wrapper === */
+
+#wrapper {
+  border-radius: 8px;
+  margin: 1rem auto 3rem auto;
+  width: 100%;
+}
+
+#wrapper main section {
+  padding: 5em 3em 3em 3em ;
+}
+
+@media screen and (min-width: 480px) {
+  #wrapper {
+    width: 95%;
+  }
+  #wrapper > .main {
+    padding: 3em 3em 1em 3em ;
+  }
+}
+@media screen and (min-width: 736px) {
+  #wrapper {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 980px) {
+  #wrapper {
+    width: 75%;
+  }
+}
+
+/* === Header === */
+
+#wrapper #header {
+  text-align: center;
+}
+
+#header > header {
+  max-width: 400px;
+  margin: 0 auto -8.5px auto;
+  padding: 3rem 0;
+}
+#header > header > a {
+  border-bottom: none;
+}
+
+
+/* === Topnav === */
+
+#nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#nav > ul li {
+  line-height: 5.6rem;
+  padding: 0;
+}
+
+#nav > ul li a {
+  border: 0;
+  display: block;
+  font-size: 0.9em;
+  padding: 0 2em;
+  text-decoration: none;
+  text-indent: 0.125em;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#nav > ul li a:hover {
+  background: rgba(207, 201, 214, 0.035);
+}
+
+/* Toggle menu */
+#menutoggle, .labeltoggle {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  #nav > ul {
+    flex-direction: column;
+    opacity: 0;
+    height: 1px;
+  }
+  .labeltoggle {
+    display: block;
+  }
+  #nav #menutoggle:checked ~ ul {
+    height: 100%;
+    opacity: 1;
+    height: auto;
+  }
+  #nav > ul li {
+    line-height: initial;
+  }
+}
+
+/* === Main === */
+main {
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content > footer {
+  align-self: center;
+  border-top: 1px solid rgba(152, 146, 158, .5);
+  border-bottom: 1px solid rgba(152, 146, 158, .5);
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* === Footer === */
+footer {
+  border-top: 1px inset rgba(152, 146, 158, .5);
+  text-align: center;
+}
+
+/* ~ Copyright ~ */
+#copyright {
+  margin-bottom: 6em;
+  text-align: center;
+}
+
+/* ~ Footer icons ~ */
+
+.icon {
+  display: inline-block;
+  font-family: "FontAwesome";
+}
+
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 2em 0;
+}
+
+ul.icons li {
+  display: inline-block;
+  padding: 0 1.25em 0 0;
+}
+
+ul.icons li:last-child {
+  padding-right: 0 !important;
+}
+
+ul.icons li > .icon {
+  border-radius: 100%;
+  border: solid 1px #4c4b4d;
+  height: 3em;
+  letter-spacing: 0;
+  line-height: 3em;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  width: 3em;
+}
+ul.icons li .icon:before {
+  font-size: 1em;
+}
+ul.icons li .icon:hover {
+  background: rgba(207, 201, 214, 0.035);
+  color: inherit;
+}
+.icon > .label {
+  display: none;
+}
+
+/* === Pages === */
+
+.content > header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.content > header > p {
+  font-size: 1.1em;
+}
+
+/* === Misc === */
+.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  font-size: 1.5em;
+  padding: .5rem;
+}

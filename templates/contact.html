@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Contact me{% endblock %}
+
+{% block content %}
+
+<section class="content">
+  <header>
+    <h2>Contact me</h2>
+    {% with message = get_flashed_messages() %}
+      {% if message %}
+        {% for m in message %}
+    <h3 class="success">{{ m }}</h3>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </header>
+
+  <article>
+    <form action="/contact" method="post">
+      {{ form.hidden_tag() }}
+      <p>
+        {{ form.name.label }}
+        {{ form.name }}
+        {% for error in form.name.errors %}
+        <span style="color: red;">[ {{ error }} ]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{ form.email.label }}
+        {{ form.email }}
+        {% for error in form.email.errors %}
+        <span style="color: red;">[ {{ error }} ]</span>
+        {% endfor %}
+
+      </p>
+      <p>
+        {{ form.message.label }}
+        {{ form.message }}
+        {% for error in form.message.errors %}
+        <span style="color: red;">[ {{ error }} ]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{ form.submit }}
+      </p>
+    </form>
+  </article>
+
+{% endblock %}
