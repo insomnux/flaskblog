@@ -23,8 +23,9 @@ imgalt: Photo of my cute cat
 
 Metadata tags used:
 
-| title  | post or page title                                           |
+|  tag   | used for                                           |
 |--------|--------------------------------------------------------------|
+| title  | post or page title                                           |
 | date   | publication date - mandatory for posts                       |
 | descr  | page or post description                                     |
 | tags   | tags for the post                                            |
