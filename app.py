@@ -70,7 +70,7 @@ def tag(tag):
     tagged = [p for p in pages if tag in p.meta.get("tags", [])]
     return render_template("tags.html", pages=tagged, tag=tag)
 
-@app.route("/contact", methods=("GET", "POST"))
+@app.route("/contact/", methods=("GET", "POST"))
 def contact():
     form = ContactForm()
     error = None
