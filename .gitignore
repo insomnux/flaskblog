@@ -15,6 +15,7 @@
 venv
 __pycache__
 flask_session
+build
 
 # Config
 config.py
