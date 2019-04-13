@@ -1,9 +1,6 @@
 # Tarballs
 *.gz
-*.bz2
 *.xz
-*.tgz
-*.txz
 *.zip
 
 # Backup files
