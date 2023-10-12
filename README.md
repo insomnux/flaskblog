@@ -2,7 +2,7 @@
 
 A very simple blog with [Flask](http://flask.pocoo.org/) and [Flask-Flatpages](https://flask-flatpages.readthedocs.io/)
 
-Demo at [http://insomnux.pythonanywhere.com/](http://insomnux.pythonanywhere.com/)
+Demo at [https://insomnux.pythonanywhere.com/](http://insomnux.pythonanywhere.com/)
 
 ## Features:
 
