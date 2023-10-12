@@ -9,7 +9,7 @@ imgalt: Screenshot of flaskblog
 
 Flaskblog on GitHub: [github.com/insomnux/flaskblog](https://github.com/insomnux/flaskblog).
 
-Demo on [insomnux.pythonanywhere.com/](http://insomnux.pythonanywhere.com/)
+Demo on [insomnux.pythonanywhere.com/](https://insomnux.pythonanywhere.com/)
 
 ## Features:
 
