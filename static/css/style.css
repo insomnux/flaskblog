@@ -17,6 +17,7 @@ pre {
 }
 
 code {
+  background: inherit;
   font-size: initial;
 }
 
